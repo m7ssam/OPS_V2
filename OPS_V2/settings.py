@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "master.apps.MasterConfig",
+    "home.apps.HomeConfig",
+    "project.apps.ProjectConfig",
+    "report.apps.ReportConfig",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +59,7 @@ ROOT_URLCONF = "OPS_V2.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join( BASE_DIR , "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
