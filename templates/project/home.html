@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<div class=" container card mt-4 p-4">
+    <div class="d-flex justify-content-evenly">
+        {% for project in name %}
+            
+        <div class="card m-2 dh" style="width: 18rem;">
+                <img src="static\images\Project\Cover\cp2011.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                <h5 class="card-title">{{project.project_name}}</h5>
+                <p class="card-text">{{project.recipient}}</p>
+                <a href="#" class="btn btn-primary">Open Project Control</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock  %}
